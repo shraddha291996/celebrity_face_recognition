@@ -40,13 +40,13 @@ def load_saved_artifacts():
     global __class_name_to_number
     global __class_number_to_name
 
-    with open("./artifacts/class_dictionary.json", "r") as f:
+    with open("D:\\Data-Scienice-Project\\py\\DataScience\\CelebrityFaceRecognition\\server\\artifacts\\class_dictionary.json", "r") as f:
         __class_name_to_number = json.load(f)
         __class_number_to_name = {v:k for k,v in __class_name_to_number.items()}
 
     global __model
     if __model is None:
-        with open('./artifacts/saved_model.pkl', 'rb') as f:
+        with open('D:\\Data-Scienice-Project\\py\\DataScience\\CelebrityFaceRecognition\\server\\artifacts\\saved_model.pkl', 'rb') as f:
             __model = joblib.load(f)
     print("loading saved artifacts...done")
 
@@ -84,7 +84,7 @@ def get_cropped_image_if_2_eyes(image_path, image_base64_data):
     return cropped_faces
 
 def get_b64_test_image_for_virat():
-    with open("b64.txt") as f:
+    with open("D:\\Data-Scienice-Project\\py\\DataScience\\CelebrityFaceRecognition\\server\\b64.txt") as f:
         return f.read()
 
 if __name__ == '__main__':
