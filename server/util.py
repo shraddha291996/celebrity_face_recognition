@@ -4,6 +4,12 @@ import numpy as np
 import base64
 import cv2
 from wavelet import w2d
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+face_cascade_path = os.path.join(script_dir, 'opencv/haarcascades/haarcascade_frontalface_default.xml')
+eye_cascade_path = os.path.join(script_dir, 'opencv/haarcascades/haarcascade_eye.xml')
+
 
 __class_name_to_number = {}
 __class_number_to_name = {}
@@ -63,8 +69,8 @@ def get_cv2_image_from_base64_string(b64str):
     return img
 
 def get_cropped_image_if_2_eyes(image_path, image_base64_data):
-    face_cascade = cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_frontalface_default.xml')
-    eye_cascade = cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_eye.xml')
+    face_cascade = cv2.CascadeClassifier(face_cascade_path)  # Use the absolute path
+    eye_cascade = cv2.CascadeClassifier(eye_cascade_path)  # Use the absolute path
 
     if image_path:
         img = cv2.imread(image_path)
@@ -84,15 +90,16 @@ def get_cropped_image_if_2_eyes(image_path, image_base64_data):
     return cropped_faces
 
 def get_b64_test_image_for_virat():
-    with open("D:\\Data-Scienice-Project\\py\\DataScience\\CelebrityFaceRecognition\\server\\b64.txt") as f:
+    with open("D:\\Data-Scienice-Project\\py\\DataScience\\CelebrityFaceRecognition\\server\\b64.txt","r") as f:
         return f.read()
 
 if __name__ == '__main__':
     load_saved_artifacts()
 
-    print(classify_image(get_b64_test_image_for_virat(), None))
+    print(classify_image(get_b64_test_image_for_virat(), "D:\\Data-Scienice-Project\\py\DataScience\\CelebrityFaceRecognition\\model\\test_images\\026_20c41942.jpg"))
+    #print(get_b64_test_image_for_virat())
 
-    # print(classify_image(None, "./test_images/federer1.jpg"))
+    #print(classify_image(None, "./test_images/federer1.jpg"))
     # print(classify_image(None, "./test_images/federer2.jpg"))
     # print(classify_image(None, "./test_images/virat1.jpg"))
     # print(classify_image(None, "./test_images/virat2.jpg"))

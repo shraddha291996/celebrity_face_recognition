@@ -58,7 +58,7 @@ function init() {
                 $("#error").show();
                 return;
             }
-            let players = ["lionel_messi", "maria_sharapova", "roger_federer", "serena_williams", "virat_kohli"];
+            let players = ["angelina_jolie", "brad_pitt", "denzel_washington", "hugh_jackman", "jennifer_lawrence"];
             
             let match = null;
             let bestScore = -1;

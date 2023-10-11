@@ -1,27 +1,54 @@
 ![](ui_snapshot.jpg)
 
-In this data science and machine learning project, we classify sports personalities. We restrict classification to only 5 people,
-1) Maria Sharapova
-2) Serena Williams
-3) Virat Kohli
-4) Roger Federer
-5) Lionel Messi
+In the context of this data science and machine learning project, objective is to categorize celebrity individuals. Classification task is specifically focused on a set of 17 distinct personalities.,
+1) Angelina Jolie
+
+2) Brad Pitt
+
+3) Denzel Washington
+
+4) Hugh Jackman
+
+5) Jennifer Lawrence
+
+6) Johnny Depp
+
+7) Kate Winslet
+
+8) Leonardo DiCaprio
+
+9) Megan Fox
+
+10) Natalie Portman
+
+11) Nicole Kidman
+
+112) Robert Downey Jr
+
+13) Sandra Bullock
+
+14) Scarlett Johansson
+
+15) Tom Cruise
+
+16) Tom Hanks
+
+17) Will Smith
 
 Here is the folder structure,
 * UI : This contains ui website code 
 * server: Python flask server
 * model: Contains python notebook for model building
-* google_image_scrapping: code to scrap google for images
-* images_dataset: Dataset used for our model training
+* images_dataset: Dataset used for model training
 
 Technologies used in this project,
 1. Python
 2. Numpy and OpenCV for data cleaning
 3. Matplotlib & Seaborn for data visualization
 4. Sklearn for model building
-5. Jupyter notebook, visual studio code and pycharm as IDE
+5. Jupyter notebook, visual studio code 
 6. Python flask for http server
 7. HTML/CSS/Javascript for UI
 
 
-Here is the video playlist for entire project: https://www.youtube.com/playlist?list=PLeo1K3hjS3uvaRHZLl-jLovIjBP14QTXc
+
