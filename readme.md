@@ -35,13 +35,13 @@ In the context of this data science and machine learning project, objective is t
 
 17) Will Smith
 
-Here is the folder structure,
+Folder structure as follows,
 * UI : This contains ui website code 
 * server: Python flask server
 * model: Contains python notebook for model building
 * images_dataset: Dataset used for model training
 
-Technologies used in this project,
+Technologies used in the project,
 1. Python
 2. Numpy and OpenCV for data cleaning
 3. Matplotlib & Seaborn for data visualization
